@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<section id="section">
+<h2>Click the button to append an item to the end of the list.</h2>
+
+</section>
+<div style="display:flex; justify-content:space-around; margin-top:30px">
+<button onclick="myFunction()">Try it</button> 
+<button onclick="removeOne()">Remove One</button> 
+<button onclick="removeAll()">Reset</button>
+</div>
+
+
+
+
+<script>
+function myFunction() {
+    var textnode = '<img src="https://www.w3schools.com/images/driveicon_32.png" style="flex-basics:30%; width:30vmin;" id="img">';
+    document.getElementById("myList").innerHTML += textnode;
+  }
+ function removeOne(){
+//    document.getElementById("myList").remove();
+ 	let img = document.getElementById("img");
+     img.parentNode.removeChild(img);
+
+ }
+ function removeAll() {
+    let allImg = document.getElementById("myList");
+     allImg.remove();
+ }
+ var div = '<div style="border: 5px double green; border-radius:100px; display:flex; background-color:black; height:auto; flex-wrap:wrap; padding:20px; justify-content: space-between;"><div id="myList"></div> </div>';
+ document.getElementById("section").innerHTML += div;
+</script>
+
+
+</body>
+</html>
